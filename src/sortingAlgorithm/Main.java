@@ -23,10 +23,20 @@ public class Main {
           //System.out.println(row[size]);
         }
 
-
-
-
         br.close();
         bw.close();
+
+
     }
+    public static double[] split(String chain) {
+        String[] parts = chain.split(separator);
+        double[] array = new double[parts.length];
+        for(int i = 0; i < array.length; i++) {
+            array[i] = Double.parseDouble(parts[i]);
+
+        }
+
+        return array;
+    }
+
 }
